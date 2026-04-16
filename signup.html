@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>foodieFind</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <header>
+        <div class="sign">
+            <div id="crt">
+                Create an
+            </div>
+            <span>
+                Account
+            </span>
+        </div>
+        <div class="sup">
+            <div id="log">
+                <img src="images/foodielogo.png" alt="foodielogo">
+            </div>
+            <span id="sign">Sign Up</span>
+
+            <div id="sup">
+                <form method="post" action="">
+                <div id="signUpMessage" class="messageDiv" style="display:none;"></div>
+                <label for="first-name"></label>
+                <input type="text" id="fname" name="first_name" placeholder="First Name" required>
+                <br>
+                <br>
+                <label for="last-name"></label>
+                <input type="text" id="lname" name="last_name" placeholder="Last Name" required>
+                <br>
+                <br>
+                <label for="email"></label>
+                <input type="email" id="email" name="email" placeholder="Email" required autocomplete="email">
+                <br>
+                <br>
+                <label for="password"></label>
+                <input type="password" id="password" name="password" placeholder="Password" required autocomplete="new-password">
+                <br>
+                <br>
+                <label id="term">
+                    <input type="checkbox" name="terms" required>
+                    Accept <a href="/terms">Terms and Conditions</a>
+                </label>
+                <br>
+                <button type="submit" id="btn">Sign Up <img src="images/Vector (1).png" alt="arrow"></button>
+            </form>
+            </div>
+            <div id="or">
+                <img src="images/Vector 50.png" alt="stroke">
+               <span> OR </span>
+               <img src="images/Vector 50.png" alt="stroke">
+            </div>
+            <div class="social">
+            <div id="google">
+                <button>
+                   <img src="images/googleicon.png" alt=""> Sign Up with Google
+                </button>
+            </div>
+            <div id="apple">
+                <button>
+                  <img src="images/appleicon.png" alt="">  Sign Up with Apple
+                </button>
+            </div>
+            </div>
+            <div class="already">
+                <span>already have an account? </span>
+                <a href="/signin">Sign in</a>
+            </div>
+        </div>
+    </header>
+    <script type="module" src="firebase.js"></script>
+</body>
+</html>

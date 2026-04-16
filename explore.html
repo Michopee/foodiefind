@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FoodieFind - Explore</title>
+  <link rel="stylesheet" href="explore.css"/>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo"> <img src="images/Logo.png" alt=""></div>
+  <nav>
+    <a href="#">Home</a>
+    <a class="active" href="#">Explore</a>
+    <a href="#">Map View</a>
+    <a href="#">Community</a>
+  </nav>
+  <div class="nav-actions">
+    <input type="text" placeholder="Search Restaurants..."/>
+    <button class="btn">Sign up</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Explore <span>Benin City</span> Restaurants</h1>
+  <p>20 local restaurants across 4 axis • filter by location, category, rating and more</p>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Search by name or dish"/>
+    <button>Search</button>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h3>Filters</h3> <br><br>
+
+    <div class="filter-group">
+      <p>CATEGORY</p> <br>
+      <div class="tags">
+        <span class="active">All</span>
+        <span>Local</span>
+        <span>Protein</span>
+        <span>Soup</span>
+        <span>Swallow</span>
+        <span>Side</span>
+        <span>Classical</span>
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <p>MINIMUM RATING</p><br>
+      <div class="tags">
+        <span class="active">Any</span>
+        <span>4.0+</span>
+        <span>4.3+</span>
+        <span>4.5+</span>
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <p>SALE MODE</p><br>
+      <div class="tags">
+        <span class="active">Walk-in</span>
+        <span>Call</span>
+        <span>App</span>
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <p>PAYMENT</p><br>
+      <div class="tags">
+        <span class="active">Cash</span>
+        <span>Transfer</span>
+        <span>POS</span>
+      </div>
+    </div>
+
+    <div class="did">
+      <span id="didy">💡  Did You Know?</span> <br><br>
+      <span id="all">All 20 restaurants shown here are real, 
+        verified Benin city restaurants with real 
+        menus and actual customer reviews</span>
+    </div>
+
+  </aside>
+
+  <!-- RESTAURANTS -->
+  <main class="content">
+    <h3>16 restaurants found</h3>
+
+    <div class="grid">
+
+      <!-- CARD -->
+      <div class="card">
+        <img src="images/currentBar.png" alt="">
+        <span class="badge">Open Now</span>
+        <div class="card-body">
+          <h4>Current Bar & Restaurant</h4>
+          <p><img src="images/location.png" alt=""> Street 45, Junction off lucky way</p>
+          <div class="rating">⭐ 4.3 (12 reviews)</div>
+          <div class="las">
+            <p>local</p>
+            <p>Aduwawa</p>
+            <span>Delivery ✓</span>
+          </div>
+          <span id="view"><a href="">View Menu  ></a></span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/EbsKitchen.png" alt="">
+        <span class="badge">Open Now</span>
+        <div class="card-body">
+          <h4>EBS Kitchen</h4>
+          <p><img src="images/location.png" alt=""> EBS Canteen, inside EBS</p>
+          <div class="rating">⭐ 4.3   {14 reviews}</div>
+          <div class="las">
+            <p>local</p>
+            <p>Aduwawa</p>
+            <span>Delivery ✓</span>
+          </div>
+          <span id="view"><a href="">View Menu  ></a></span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/TrippleJ.png" alt="">
+        <span class="badge">Open Now</span>
+        <div class="card-body">
+          <h4>Tripple J</h4>
+          <p><img src="images/location.png" alt=""> Sapele Road</p>
+          <div class="rating">⭐ 4.4   {9 reviews}</div>
+          <div class="las">
+            <p>local</p>
+            <p>Aduwawa</p>
+            <span>Delivery ✓</span>
+          </div>
+          <span id="view"><a href="">View Menu  ></a></span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/GodsentL.png" alt="">
+        <span class="badge">Open Now</span>
+        <div class="card-body">
+          <h4>Godsent Kitchen</h4>
+          <p><img src="images/location.png" alt=""> Market Square</p>
+          <div class="rating">⭐ 4.5   {15 reviews}</div>
+          <div class="las">
+            <p>local</p>
+            <p>Aduwawa</p>
+            <span>Delivery ✓</span>
+          </div>
+          <span id="view"><a href="">View Menu  ></a></span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/GodsentL.png" alt="">
+        <span class="badge">Open Now</span>
+        <div class="card-body">
+          <h4>Greyfield Restaurant</h4>
+          <p><img src="images/location.png" alt=""> No.81, Airport Road, Opp ITV, Benin City</p>
+          <div class="rating">⭐ 4.4   {32 reviews}</div>
+          <div class="las">
+            <p>local</p>
+            <p>Aduwawa</p>
+            <span>Delivery ✓</span>
+          </div>
+          <span id="view"><a href="">View Menu  ></a></span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/victoriouss.png" alt="">
+        <span class="badge">Open Now</span>
+        <div class="card-body">
+          <h4>Victorious Mega Kitchen</h4>
+          <p><img src="images/location.png" alt=""> No.2 Osagiede Street, 2nd Ugbor, GRA</p>
+          <div class="rating">⭐ 4.3   {54 reviews}</div>
+          <div class="las">
+            <p>local</p>
+            <p>Aduwawa</p>
+            <span>Delivery ✓</span>
+          </div>
+          <span id="view"><a href="">View Menu  ></a></span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/sjgrils.png" alt="">
+        <span class="badge">Open Now</span>
+        <div class="card-body">
+          <h4>SJ Grills</h4>
+          <p><img src="images/location.png" alt=""> No.1 Brisborn Iyamu Street Off Ugbor Village Road</p>
+          <div class="rating">⭐ 4.3   {94 reviews}</div>
+          <div class="las">
+            <p>local</p>
+            <p>Aduwawa</p>
+            <span>Delivery ✓</span>
+          </div>
+          <span id="view"><a href="">View Menu  ></a></span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/choplifee.png" alt="">
+        <span class="badge">Open Now</span>
+        <div class="card-body">
+          <h4>Choplife Republic</h4>
+          <p><img src="images/location.png" alt=""> No.9 Okogo, St.Oka, Benin City</p>
+          <div class="rating">⭐ 4.3   {46 reviews}</div>
+          <div class="las">
+            <p>local</p>
+            <p>Aduwawa</p>
+            <span>Delivery ✓</span>
+          </div>
+          <span id="view"><a href="">View Menu  ></a></span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/hotbox.png" alt="">
+        <span class="badge">Open Now</span>
+        <div class="card-body">
+          <h4>The Hot Box By Wayo</h4>
+          <p><img src="images/location.png" alt=""> 32 Giwa Amu off Airport Rd, Benin City</p>
+          <div class="rating">⭐ 4.3   {33 reviews}</div>
+          <div class="las">
+            <p>local</p>
+            <p>Aduwawa</p>
+            <span>Delivery ✓</span>
+          </div>
+          <span id="view"><a href="">View Menu  ></a></span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/yoloo.png" alt="">
+        <span class="badge">Open Now</span>
+        <div class="card-body">
+          <h4>YOLO Restaurant</h4>
+          <p><img src="images/location.png" alt=""> UBTH Staff Club, Dentistry Qtrs, Ugbowo</p>
+          <div class="rating">⭐ 4.6   {16 reviews}</div>
+          <div class="las">
+            <p>local</p>
+            <p>Aduwawa</p>
+            <span>Delivery ✓</span>
+          </div>
+          <span id="view"><a href="">View Menu  ></a></span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/zzonee.png" alt="">
+        <span class="badge">Open Now</span>
+        <div class="card-body">
+          <h4>Zzone</h4>
+          <p><img src="images/location.png" alt=""> Ekosodin Junction, Ugbowo</p>
+          <div class="rating">⭐ 4.3   {17 reviews}</div>
+          <div class="las">
+            <p>local</p>
+            <p>Aduwawa</p>
+            <span>Delivery ✓</span>
+          </div>
+          <span id="view"><a href="">View Menu  ></a></span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/apex.png" alt="">
+        <span class="badge">Open Now</span>
+        <div class="card-body">
+          <h4>Apex</h4>
+          <p><img src="images/location.png" alt=""> BDPA,21st Street, Ugbowo</p>
+          <div class="rating">⭐ 4.3   {11 reviews}</div>
+          <div class="las">
+            <p>local</p>
+            <p>Aduwawa</p>
+            <span>Delivery ✓</span>
+          </div>
+          <span id="view"><a href="">View Menu  ></a></span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/homeawayy.png" alt="">
+        <span class="badge">Open Now</span>
+        <div class="card-body">
+          <h4>Home and Away Restaurant</h4>
+          <p><img src="images/location.png" alt=""> 1, Ikpokpan Road, Off Sapele Road, GRA</p>
+          <div class="rating">⭐ 4.4   {29 reviews}</div>
+          <div class="las">
+            <p>local</p>
+            <p>Aduwawa</p>
+            <span>Delivery ✓</span>
+          </div>
+          <span id="view"><a href="">View Menu  ></a></span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/sipdipp.png" alt="">
+        <span class="badge">Open Now</span>
+        <div class="card-body">
+          <h4>Sip and Dip Restaurant</h4>
+          <p><img src="images/location.png" alt=""> 63-65, Eli Love Filling Station, Sapele Road</p>
+          <div class="rating">⭐ 4.4   {21 reviews}</div>
+          <div class="las">
+            <p>local</p>
+            <p>Aduwawa</p>
+            <span>Delivery ✓</span>
+          </div>
+          <span id="view"><a href="">View Menu  ></a></span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/kada.png" alt="">
+        <span class="badge">Open Now</span>
+        <div class="card-body">
+          <h4>Kada Bistro</h4>
+          <p><img src="images/location.png" alt=""> 111, Benin Sapele Road</p>
+          <div class="rating">⭐ 4.3   {22 reviews}</div>
+          <div class="las">
+            <p>local</p>
+            <p>Aduwawa</p>
+            <span>Delivery ✓</span>
+          </div>
+          <span id="view"><a href="">View Menu  ></a></span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/experi.png" alt="">
+        <span class="badge">Open Now</span>
+        <div class="card-body">
+          <h4>The Experience Restaurant & Bar</h4>
+          <p><img src="images/location.png" alt=""> Ku Plaza, Benin Sapele Road, Opp PZ Junction</p>
+          <div class="rating">⭐ 4.3   {15 reviews} </div>
+          <div class="las">
+            <p>local</p>
+            <p>Aduwawa</p>
+            <span>Delivery ✓</span>
+          </div>
+          <span id="view"><a href="">View Menu > </a></span>
+        </div>
+      </div>
+
+      <!-- Duplicate cards as needed -->
+
+    </div>
+  </main>
+
+</div>
+
+</body>
+</html>
