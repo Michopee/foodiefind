@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f6eef5;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #fff;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+  color: #2c7a5d;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #666;
+}
+
+nav a.active {
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+.actions input {
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  margin-right: 10px;
+}
+
+.actions button {
+  background: #f59e0b;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+/* MAIN LAYOUT */
+.container {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 260px;
+  background: #e8eae8;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.sidebar h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.filter {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 15px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filters button {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+}
+
+.filters button.active {
+  background: #f59e0b;
+  color: #fff;
+  border: none;
+}
+
+/* MAP AREA */
+.map {
+  flex: 1;
+  height: 600px;
+  background: #cfe3c1;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* GRID BACKGROUND */
+.grid {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(#ffffff40 1px, transparent 1px),
+    linear-gradient(90deg, #ffffff40 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+/* TAGS */
+.tag {
+  position: absolute;
+  background: #f59e0b;
+  color: #000;
+  padding: 6px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.tag span {
+  background: #2c7a5d;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* CENTER DOT */
+.center-dot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #3b82f6;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* CONTROLS */
+.controls {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.controls button {
+  margin-bottom: 8px;
+  padding: 8px;
+  border: none;
+  background: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}

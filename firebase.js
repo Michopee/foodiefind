@@ -49,7 +49,7 @@
         setDoc(docRef,userData)
         .then(()=>{
             setTimeout(() => {
-            window.location.href = "login.html";
+            window.location.href="login.html";
             }, 3000);
         })
         .catch((error)=>{

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FoodieFind Map View</title>
+  <link rel="stylesheet" href="map.css"/>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo"><img src="images/foodielogo.png" alt=""></div>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Explore</a>
+    <a href="#" class="active">Map View</a>
+    <a href="#">Community</a>
+  </nav>
+
+  <div class="actions">
+    <input type="text" placeholder="Search restaurants..." />
+    <button>Sign Up</button>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2>Map View • 20 Restaurants</h2>
+
+    <input class="filter" type="text" placeholder="Filter by name or axis..." />
+
+    <div class="filters">
+      <button class="active">All</button>
+      <button>Aduwawa</button>
+      <button>Airport Road</button>
+      <button>Ugobowo</button>
+      <button>Sapele Rd</button>
+    </div>
+  </aside>
+
+  <!-- Map Area -->
+  <section class="map">
+
+    <!-- grid background -->
+    <div class="grid"></div>
+
+    <!-- Sample markers -->
+    <div class="tag" style="top: 100px; left: 120px;">Mandy's</div>
+    <div class="tag" style="top: 90px; left: 210px;">Tripple J</div>
+    <div class="tag" style="top: 130px; left: 160px;">Godsent</div>
+    <div class="tag" style="top: 60px; left: 120px;"><span>ADUWAWA</span></div>
+    <div class="tag" style="top: 40px; left: 180px;">EBS</div>
+    <div class="tag" style="top: 80px; left: 160px;">Current</div>
+
+    <div class="tag" style="top: 90px; right: 180px;">Choplife</div>
+    <div class="tag" style="top: 70px; right: 110px;">Victorious</div>
+    <div class="tag" style="top: 90px; right: 70px;">The Hot Box</div>
+    <div class="tag" style="top: 40px; right: 250px;">Greyfield</div>
+    <div class="tag" style="top: 45px; right: 70px;">SJ Grills</div>
+    <div class="tag" style="top: 40px; right: 120px;"><span>AIRPORT ROAD</span></div>
+
+    <div class="tag" style="bottom: 140px; left: 80px;">Yolo</div>
+    <div class="tag" style="bottom: 100px; left: 200px;">Zzon</div>
+    <div class="tag" style="bottom: 40px; left: 180px;">Parkhead</div>
+    <div class="tag" style="bottom: 150px; left: 220px;">Apex</div>
+    <div class="tag" style="bottom: 90px; left: 120px;"><span>UGBOWO</span></div>
+    <div class="tag" style="bottom: 70px; left: 50px;">Authentic</div>
+
+    <div class="tag" style="bottom: 130px; right: 120px;">Home</div>
+    <div class="tag" style="bottom: 120px; right: 180px;">Mama</div>
+    <div class="tag" style="bottom: 60px; right: 50px;">The</div>
+    <div class="tag" style="bottom: 100px; right: 120px;"><span>SAPELE RD</span></div>
+    <div class="tag" style="bottom: 110px; right: 50px;">Sip & Dip</div>
+    <div class="tag" style="bottom: 60px; right: 150px;">Kada</div>
+
+    <!-- center marker -->
+    <div class="center-dot"></div>
+
+    <!-- map controls -->
+    <div class="controls">
+      <button>+</button>
+      <button>-</button>
+      <button>📍</button>
+    </div>
+
+  </section>
+
+</main>
+
+</body>
+</html>
