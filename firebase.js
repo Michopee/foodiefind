@@ -26,46 +26,90 @@
     },5000);
  }
  const signUp=document.getElementById('btn');
- signUp.addEventListener('click', (event)=>{
-    event.preventDefault();
-    const email=document.getElementById('email').value;
-    const password=document.getElementById('password').value;
-    const firstName=document.getElementById('fname').value;
-    const lastName=document.getElementById('lname').value;
+ if(signup){ 
+    signUp.addEventListener('click', 
+    (event)=>{ 
+        event.preventDefault();
+        const email=document.getElementById('email').value; 
+        const password=document.getElementById('password').value; 
+        const firstName=document.getElementById('fname').value; 
+        const lastName=document.getElementById('lname').value; 
 
-    const auth=getAuth();
-    const db=getFirestore();
+        const auth=getAuth(); 
+        const db=getFirestore(); 
 
-    createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential)=>{
-        const user=userCredential.user;
-        const userData={
-            email: email,
-            firstName: firstName,
-            lastName:lastName
-        };
-        showMessage('Account Created Successfully, please Login to continue', 'signUpMessage');
-        const docRef=doc(db, "users", user.uid);
-        setDoc(docRef,userData)
-        .then(()=>{
-            setTimeout(() => {
-            window.location.href="login.html";
-            }, 3000);
-        })
-        .catch((error)=>{
-            console.error("error writing document", error);
-        });
-    })
-    .catch((error)=>{
-        const errorCode=error.code;
-        if(errorCode=='auth/email-already-in-use'){
-            showMessage('Email Address Already Exists !!!', 'signUpMessage');
-        }
-        else{
-            showMessage('unable to create User', 'signUpMessage');
-        }
-    })
- });
+        createUserWithEmailAndPassword(auth, email, password) 
+        .then((userCredential)=>{ 
+            const user=userCredential.user; 
+            const userData={ 
+                email: email, 
+                firstName: firstName, 
+                lastName:lastName 
+            }; 
+            showMessage('Account Created Successfully, please Login to continue', 
+            'signUpMessage'); 
+                const docRef=doc(db, "users", user.uid); 
+                setDoc(docRef,userData) 
+                .then(()=>{ 
+                    setTimeout(() => { 
+                        window.location.href="login.html"; 
+                    }, 3000); 
+                }) 
+                .catch((error)=>{ 
+                    console.error("error writing document", error); 
+                }); 
+            })
+             .catch((error)=>{ 
+                const errorCode=error.code; 
+                if(errorCode=='auth/email-already-in-use'){ 
+                    showMessage('Email Address Already Exists !!!', 'signUpMessage'); 
+                } 
+                else{ 
+                    showMessage('unable to create User', 'signUpMessage'); 
+                } 
+            }) 
+        }); 
+    }
+ //signUp.addEventListener('click', (event)=>{
+   // event.preventDefault();
+    //const email=document.getElementById('email').value;
+  //  const password=document.getElementById('password').value;
+   // const firstName=document.getElementById('fname').value;
+  //  const lastName=document.getElementById('lname').value;
+
+    //const auth=getAuth();
+    //const db=getFirestore();
+
+    //createUserWithEmailAndPassword(auth, email, password)
+    //.then((userCredential)=>{
+      //  const user=userCredential.user;
+        //const userData={
+          //  email: email,
+            //firstName: firstName,
+            //lastName:lastName
+        //};
+        //showMessage('Account Created Successfully, please Login to continue', 'signUpMessage');
+        //const docRef=doc(db, "users", user.uid);
+        //setDoc(docRef,userData)
+        //.then(()=>{
+          //  setTimeout(() => {
+            //window.location.href="login.html";
+            //}, 3000);
+        //})
+        //.catch((error)=>{
+          //  console.error("error writing document", error);
+        //});
+    //})
+    //.catch((error)=>{
+      //  const errorCode=error.code;
+        //if(errorCode=='auth/email-already-in-use'){
+          //  showMessage('Email Address Already Exists !!!', 'signUpMessage');
+        //}
+        //else{
+          //  showMessage('unable to create User', 'signUpMessage');
+        //}
+    //})
+ //});
 
 
 const signIn=document.getElementById('loginn');
