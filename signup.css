@@ -69,7 +69,8 @@ header .sup #sup form input {
 }
 
 .messageDiv{
-    background-color:hsl(327,90%,28%);
+    background-color:#f5a623;
+    border-radius: 20px;
     color:white;
     padding:10px 20px;
     margin:10px;
@@ -129,10 +130,14 @@ header .sup .social {
     margin-left: 75px;
 }
 header .sup .social button {
+    cursor: pointer;
     padding: 12px;
     width: 33vw;
     border-radius: 10px;
     border: 1px solid #666;
+}
+header .sup .social #google button:hover{
+    background-color: #b6b4b4;
 }
 header .sup .social img {
     width: 15px;
@@ -140,6 +145,9 @@ header .sup .social img {
 }
 header .sup .social #apple button {
     background-color: #FFCC7B;
+}
+header .sup .social #apple button:hover {
+    background-color: #f2b24a;
 }
 header .sup .already {
     flex: 1;

@@ -26,69 +26,71 @@
     },5000);
  }
  const signUp=document.getElementById('btn');
- signUp.addEventListener('click', (event)=>{
-    event.preventDefault();
-    const email=document.getElementById('email').value;
-    const password=document.getElementById('password').value;
-    const firstName=document.getElementById('fname').value;
-    const lastName=document.getElementById('lname').value;
-
-    const auth=getAuth();
-    const db=getFirestore();
-
-    createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential)=>{
-        const user=userCredential.user;
-        const userData={
-            email: email,
-            firstName: firstName,
-            lastName:lastName
-        };
-        showMessage('Account Created Successfully, please Login to continue', 'signUpMessage');
-        const docRef=doc(db, "users", user.uid);
-        setDoc(docRef,userData)
-        .then(()=>{
-            setTimeout(() => {
-            window.location.href="login.html";
-            }, 3000);
+ if (signUp) {
+    signUp.addEventListener('click', (event)=>{
+        event.preventDefault();
+        const email=document.getElementById('email').value;
+        const password=document.getElementById('password').value;
+        const firstName=document.getElementById('fname').value;
+        const lastName=document.getElementById('lname').value;
+    
+        const auth=getAuth();
+        const db=getFirestore();
+    
+        createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential)=>{
+            const user=userCredential.user;
+            const userData={
+                email: email,
+                firstName: firstName,
+                lastName:lastName
+            };
+            showMessage('Account Created Successfully, please Login to continue', 'signUpMessage');
+            const docRef=doc(db, "users", user.uid);
+            setDoc(docRef,userData)
+            .then(()=>{
+                setTimeout(() => {
+                window.location.href="login.html";
+                }, 3000);
+            })
+            .catch((error)=>{
+                console.error("error writing document", error);
+            });
         })
         .catch((error)=>{
-            console.error("error writing document", error);
+            const errorCode=error.code;
+            if(errorCode=='auth/email-already-in-use'){
+                showMessage('Email Address Already Exists !!!', 'signUpMessage');
+            }
+            else{
+                showMessage('unable to create User', 'signUpMessage');
+            }
+        })
+     });
+ }
+
+ const signIn=document.querySelector('#loginn');
+ if (signIn) {
+    signIn.addEventListener("click", (event) => {
+      event.preventDefault();
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const auth = getAuth();
+  
+      signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          showMessage("login is successful", "signInMessage");
+          const user = userCredential.user;
+          localStorage.setItem("loggedInUserId", user.uid);
+          window.location.href = "community.html";
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          if (errorCode === "auth/invalid-credential") {
+            showMessage("Incorrect Email or Password", "signInMessage");
+          } else {
+            showMessage("Account does not Exist", "signInMessage");
+          }
         });
-    })
-    .catch((error)=>{
-        const errorCode=error.code;
-        if(errorCode=='auth/email-already-in-use'){
-            showMessage('Email Address Already Exists !!!', 'signUpMessage');
-        }
-        else{
-            showMessage('unable to create User', 'signUpMessage');
-        }
-    })
- });
-
-
-const signIn=document.getElementById('loginn');
- signIn.addEventListener('click', (event)=>{
-    event.preventDefault();
-    const email=document.getElementById('email').value;
-    const password=document.getElementById('password').value;
-    const auth=getAuth();
-
-    signInWithEmailAndPassword(auth, email,password)
-    .then((userCredential)=>{
-        showMessage('login is successful', 'signInMessage');
-        const user=userCredential.user;
-        localStorage.setItem('loggedInUserId', user.uid);
-        window.location.href='community.html';
-    })
-    .catch((error)=>{
-        const errorCode=error.code;
-        if(errorCode==='auth/invalid-credential'){
-            showMessage('Incorrect Email or Password', 'signInMessage');
-        }
-        else{
-            showMessage('Account does not Exist', 'signInMessage');
-        }
-    })
- })
+    });
+  }
