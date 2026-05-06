@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+     background-color: #ffffff;
+}
+nav{
+    display: flex;
+    margin: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #31593e;
+    color: white;
+    padding: 0.5rem;
+}
+nav .links a{
+    text-decoration: none;
+    color: white;
+}
+nav .links{
+    display: flex;
+    text-decoration: none;
+    gap: 2rem;
+}
+nav .links a:hover{
+    color: #F4A228;
+}
+nav .btns{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    
+}
+.button1 button{
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem 5rem 0.5rem 0.2rem;
+    border-radius: 20px;
+    border: none;
+}
+ .button2 button{
+    background-color: #F4A228;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 0.5rem 2rem;
+}
+header{
+    margin: 0;
+    background-color: #213b2a;
+    height: 60vh;
+    clip-path: polygon(50% 0%, 100% 0%, 100% 53%, 20% 96%, 10% 96%, 2% 90%, 0% 80%, 0% 0%);    
+}
+header .texts{
+    width:50vw;
+    padding-top: 4rem;
+    padding-left: 3rem;
+    /* clip-path:polygon(0% 0%, 100% 0%, 100% 65%, 0 94%, 0 93%); */
+
+
+}
+header .texts h1{
+  font-family: "Uncial Antiqua", system-ui;
+  color: #F4A228;
+
+ }
+ header .texts p{
+    padding-top: 2rem;
+    width: 24vw;
+    color: white;
+ }
+ header .food{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 650px ;
+    top: 150px;
+
+}
+section{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3rem;
+    padding-left: 3rem;
+    padding-right: 2rem;
+
+}
+section .rates{
+    display: flex;
+    flex-direction: column;
+}
+section .btns button{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    border-radius: 20px;
+}
+.button button{
+    padding: 0.5rem 6rem 0.5rem 0.2rem;
+    border-radius: 15px;
+}
+section .container{
+    display: flex;
+    align-items: center;
+    gap:2rem;
+    
+}
+section .container .box{
+    gap:2rem;
+    padding-top: 2rem;
+    display: flex;
+    align-items: center;
+}
+section .container p{
+    color: #F4A228;
+    font-weight: 900;
+    font-size: xx-large;
+}
+section .container span{
+    color: black;
+    font-size: medium;
+    font-weight: lighter ;
+}
+main{
+    display: flex;
+    padding: 3rem;
+    background-color: #FDF6EC;
+    gap: 1rem;
+}
+article{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding-top: 2rem;
+    padding-left: 3rem;
+    padding-right: 2rem;
+}
+article .view{
+    color: #F4A228;
+}
+article .btns button{
+    color: #F4A228;
+    padding: 0.5rem 2rem;
+    border: 1px solid#F4A228;
+    border-radius: 10px;
+}
+aside{
+    background-color: white;
+    padding: 3rem;
+}
+aside .top{
+    display: flex;
+    align-items: center;
+    gap: 17rem;
+}
+aside .btns button{
+    color: #F4A228;
+    padding: 0.5rem;
+    border: 1px solid#F4A228;
+    border-radius: 20px;
+}
+aside .bottom{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-top:2rem ;
+}
+figure{
+    background-color: white;
+    padding:3rem;
+}
+figure .top{
+    display: flex;
+    align-items: center;
+    gap: 25rem;
+}
+figure .btns button{
+    color: #F4A228;
+    padding: 0.2rem 0.9rem;
+    border: 1px solid#F4A228;
+    border-radius: 20px
+}
+figure .bottom{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 3rem;
+}
+figcaption{
+    display: flex;
+    padding: 5rem;
+    align-items: center;
+    gap: 11rem;
+    background-color: #1A3D2B;
+
+}
+figcaption h1{
+    color: #F4A228;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 64px;
+    line-height: 100%;
+    align-items: center;
+
+}
+figcaption small{
+    color: white;
+    width: 80vw;
+}
+footer{
+    display: flex;
+    padding: 3rem;
+    gap :8rem;
+    background-color: #1C2219;
+    color: white;
+}
+footer .one .text{
+    padding-top: 2rem;
+    width: 20vw;
+}
+footer .route p{
+    padding-bottom: 1rem;
+}
+footer .route h1{
+    padding-bottom: 1rem;
+}
+
+.twenty{
+    text-align: center;
+}

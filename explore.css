@@ -11,6 +11,9 @@
   
   /* NAVBAR */
   .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -41,6 +44,10 @@
     border-radius: 20px;
     border: 1px solid #ddd;
   }
+
+.nav-actions a {
+  text-decoration: none;
+}
   .nav-actions ::placeholder {
     color: #6c8878;
   }
