@@ -16,110 +16,6 @@
  // Initialize Firebase
  const app = initializeApp(firebaseConfig);
 
-<<<<<<< HEAD
- function showMessage(message, divId){
-    var messageDiv=document.getElementById(divId);
-    messageDiv.style.display="block";
-    messageDiv.innerHTML=message;
-    messageDiv.style.opacity=1;
-    setTimeout(function(){
-        messageDiv.style.opacity=0;
-    },5000);
- }
- const signUp=document.getElementById('btn');
- if(signup){ 
-    signUp.addEventListener('click', 
-    (event)=>{ 
-        event.preventDefault();
-        const email=document.getElementById('email').value; 
-        const password=document.getElementById('password').value; 
-        const firstName=document.getElementById('fname').value; 
-        const lastName=document.getElementById('lname').value; 
-
-        const auth=getAuth(); 
-        const db=getFirestore(); 
-
-        createUserWithEmailAndPassword(auth, email, password) 
-        .then((userCredential)=>{ 
-            const user=userCredential.user; 
-            const userData={ 
-                email: email, 
-                firstName: firstName, 
-                lastName:lastName 
-            }; 
-            showMessage('Account Created Successfully, please Login to continue', 
-            'signUpMessage'); 
-                const docRef=doc(db, "users", user.uid); 
-                setDoc(docRef,userData) 
-                .then(()=>{ 
-                    setTimeout(() => { 
-                        window.location.href="login.html"; 
-                    }, 3000); 
-                }) 
-                .catch((error)=>{ 
-                    console.error("error writing document", error); 
-                }); 
-            })
-             .catch((error)=>{ 
-                const errorCode=error.code; 
-                if(errorCode=='auth/email-already-in-use'){ 
-                    showMessage('Email Address Already Exists !!!', 'signUpMessage'); 
-                } 
-                else{ 
-                    showMessage('unable to create User', 'signUpMessage'); 
-                } 
-            }) 
-        }); 
-    }
- //signUp.addEventListener('click', (event)=>{
-   // event.preventDefault();
-    //const email=document.getElementById('email').value;
-  //  const password=document.getElementById('password').value;
-   // const firstName=document.getElementById('fname').value;
-  //  const lastName=document.getElementById('lname').value;
-
-    //const auth=getAuth();
-    //const db=getFirestore();
-
-    //createUserWithEmailAndPassword(auth, email, password)
-    //.then((userCredential)=>{
-      //  const user=userCredential.user;
-        //const userData={
-          //  email: email,
-            //firstName: firstName,
-            //lastName:lastName
-        //};
-        //showMessage('Account Created Successfully, please Login to continue', 'signUpMessage');
-        //const docRef=doc(db, "users", user.uid);
-        //setDoc(docRef,userData)
-        //.then(()=>{
-          //  setTimeout(() => {
-            //window.location.href="login.html";
-            //}, 3000);
-        //})
-        //.catch((error)=>{
-          //  console.error("error writing document", error);
-        //});
-    //})
-    //.catch((error)=>{
-      //  const errorCode=error.code;
-        //if(errorCode=='auth/email-already-in-use'){
-          //  showMessage('Email Address Already Exists !!!', 'signUpMessage');
-        //}
-        //else{
-          //  showMessage('unable to create User', 'signUpMessage');
-        //}
-    //})
- //});
-
-
-const signIn=document.getElementById('loginn');
- signIn.addEventListener('click', (event)=>{
-    event.preventDefault();
-    const email=document.getElementById('email').value;
-    const password=document.getElementById('password').value;
-    const auth=getAuth();
-=======
  function showMessage(message, divId) {
   const messageDiv = document.getElementById(divId);
 
@@ -179,7 +75,6 @@ const signIn=document.getElementById('loginn');
         })
      });
  }
->>>>>>> FoodBranch
 
  const signIn=document.querySelector('#loginn');
  if (signIn) {
